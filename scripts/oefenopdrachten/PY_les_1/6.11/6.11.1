@@ -1,0 +1,90 @@
+##Write a program that asks the user to enter a string. The program should then print the following:
+##The total number of characters in the string
+##The string repeated 10 times
+##The first character of the string (remember that string indices start at 0)
+##The first three characters of the string
+##The last three characters of the string
+##The string backwards
+##The seventh character of the string if the string is long enough and a message otherwise
+##The string with its first and last characters removed
+##The string in all caps
+##The string with every a replaced with an e
+##The string with every letter replaced by a space
+
+##wat in 6.5 Slices staat lijkt niet overeen te komen met wat mijn python doet. 
+
+string = input('Enter a string: ')
+
+##02
+print ()
+print ('The total number of characters in the string')
+string_len = len(string)
+print (string_len)
+
+##03
+print ()
+print ('The string repeated 10 times')
+for i in range (10):
+    print (string)
+
+##04
+print ()
+print ('The first character of the string')
+## (remember that string indices start at 0) ik snap niet waarom ik string[:1] moet gerbuiken en niet string[:0]
+string_one = string[:1]
+print (string_one)
+
+##05
+print ()
+print ('The first three characters of the string')
+string_three = string[ :3]
+print (string_three)
+
+##06
+print ()
+print ('The last three characters of the string')
+string_end = string[-3: ]
+print (string_end)
+
+##07
+print ()
+print ('The string backwards')
+string_rev = string[ : :-1]
+print (string_rev)
+
+##08
+print ()
+print ('The seventh character of the string if the string is long enough and a message otherwise')
+string_sev = string[6:7]
+if string_sev== '':
+    print ('And here is the message')
+else:
+    print (string_sev)
+
+
+##09
+print ()
+print ('The string with its first and last characters removed')
+string_rem = string[1:-1]
+print (string_rem)
+
+##10
+print ()
+print ('The string in all caps')
+string_upp = string.upper()
+print (string_upp)
+
+
+##11
+print ()
+print ('The string with every a replaced with an e')
+string_a_e = string.replace('a','e')
+print (string_a_e)
+
+
+##12
+print ()
+print ('The string with every letter replaced by a space')
+##nieuwe string maken en met isalpha kijken of een string positie een letter is. zoja dan in een spatie veranderen. zo nee, laten staan. 
+##string_alpha = string
+##print (string_alpha)

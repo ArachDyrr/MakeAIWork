@@ -1,0 +1,39 @@
+## def is van define x0 en x1 zijn de namen van de variabelen. x0 en x1 zijn de formele parameters
+def average2 (x0, x1):
+    ## de body van de functie, de eigenlijke berekening. (return van geef terug)
+    return (x0 + x1) / 2
+
+## de actuele parameters
+a = average2 (3, 7)
+b = average2 (-3, -7)
+c = average2 (a, b)
+
+##print het resultaat van bovenstaande uit. 
+print ('Met average2 en variabelen    :',a ,b, c)
+
+print ('Met average2 zonder variabelen',
+    average2 (3, 7),
+    average2 (-3, -7),
+    average2 (
+        average2 (3, 7),
+        average2 (-3, -7)
+    )
+)
+
+def average3 (x0, x1, x2):
+    return (x0 + x1 + x2) / 3
+
+print ('Met average3               :'
+, average3 (4, 5, -12))
+
+## handiger is:
+
+def averageOfList (aList):
+    total = 0
+    ## x wordt steeds bij het totaal opgeteld
+    for x in aList:
+        total += x
+    ## len is de actuele parameter voor de lengte van de lijst    
+    return total / len (aList)
+
+print ('met averageOfAlist                     :', average2 (3, 7), average3 (4, 5, -12), average)

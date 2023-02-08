@@ -1,0 +1,13 @@
+##A lot of cell phones have tip calculators. Write one. Ask the user for the price of the meal and the percent tip they want to leave. Then print both the tip amount and the total bill with the tip included.
+
+netto = int(input('Please enter the netto price of the invoice.' ))
+tip_nr = int(input('Please enter your tip percentage.'))
+
+tip_per = tip_nr/100
+
+##deze moeten allebij afgerond worden omdat anders tip+total alsnog onafgeronde data genereerd. zie filmpje teams. 
+tip = round(netto * tip_per, 2)
+total = round(netto + tip, 2)
+
+print (f"Your tip total is: {tip}")
+print (f"Your invoice total is: {total}")
