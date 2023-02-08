@@ -1,0 +1,7 @@
+string = input('Enter a string: ')
+
+
+print ()
+print ('The string with every letter replaced by a space')
+
+print (string.replace({when isalpha() = True},' '))
