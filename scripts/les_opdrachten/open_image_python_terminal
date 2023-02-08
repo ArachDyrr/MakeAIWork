@@ -1,0 +1,12 @@
+##open ptpython so it can suggest commands
+##python -m ptpython
+
+##import the Image module from Pillow
+from PIL import Image
+
+
+## open het plaatje bv in Vcode en copieer de relative path. dit commando slaat het op als img
+img = Image.open("les_opdrachten/flamingo.JPG")
+
+##laat het plaatje zien
+img.show()
