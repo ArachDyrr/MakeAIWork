@@ -1,0 +1,14 @@
+height = 7
+line_len = '*'*height
+#line = 0
+#space_rep = 1+ height // 2 
+
+
+#while line < height:
+#    line += 1
+#    space_rep -= 1
+#    space_rep_abs = abs(space_rep)
+#    print (' '*space_rep_abs, '*'*(height-2*space_rep_abs),' '*space_rep_abs,sep='')
+
+line_len = replace.line_len(([3]:[3]),'.')
+print (line_len)
