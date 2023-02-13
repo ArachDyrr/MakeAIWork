@@ -1,0 +1,18 @@
+b_list = [0,1,2,3,4]
+
+def own_len(a_list):
+    tel = 0
+    for item in a_list:
+        tel = tel +1
+    return (tel)
+    
+
+print (own_len(b_list))
+
+def own_sum (c_list):
+    add = 0
+    for item in c_list:
+        add = add + item
+    return (add)
+
+print (own_sum(b_list))
