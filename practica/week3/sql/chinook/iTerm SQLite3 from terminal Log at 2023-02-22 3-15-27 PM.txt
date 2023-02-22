@@ -1,0 +1,260 @@
+Last login: Wed Feb 22 11:34:00 on ttys000
+(miw) ➜  MakeAIWork git:(main) .read Chinook_Sqlite.sql
+zsh: command not found: .read
+(miw) ➜  MakeAIWork git:(main) makeAIWork
+zsh: command not found: makeAIWork
+(miw) ➜  MakeAIWork git:(main) ls
+README.md        notebooks        requirements.txt uml
+TEST             pics             scripts          venv.md
+data             practica         sh
+install          projects         test.txt
+(miw) ➜  MakeAIWork git:(main) practica
+(miw) ➜  practica git:(main) ls
+csv         json        pip         week02      week1       week3
+geo         pics        week01      week03 mine week2
+(miw) ➜  practica git:(main) week3
+(miw) ➜  week3 git:(main) ls
+clustering sql
+(miw) ➜  week3 git:(main) sql
+(miw) ➜  sql git:(main) .read Chinook_Sqlite.sql
+zsh: command not found: .read
+(miw) ➜  sql git:(main) ls
+chinook  csv      db       notebook pics     sql.md
+(miw) ➜  sql git:(main) csv
+(miw) ➜  csv git:(main) .read Chinook_Sqlite.sql
+zsh: command not found: .read
+(miw) ➜  csv git:(main) ls
+countries_europe.csv european_union.csv
+(miw) ➜  csv git:(main) cd ..
+(miw) ➜  sql git:(main) ls
+chinook  csv      db       notebook pics     sql.md
+(miw) ➜  sql git:(main) chinok
+zsh: command not found: chinok
+(miw) ➜  sql git:(main) chinook
+(miw) ➜  chinook git:(main) .read Chinook_Sqlite.sql
+zsh: command not found: .read
+(miw) ➜  chinook git:(main) sqlite3 Chinook.db
+SQLite version 3.39.5 2022-10-14 20:58:05
+Enter ".help" for usage hints.
+sqlite> .read Chinook_Sqlite.sql
+sqlite> .tables
+Album          Employee       InvoiceLine    PlaylistTrack
+Artist         Genre          MediaType      Track
+Customer       Invoice        Playlist
+sqlite> select *
+   ...> from FROM Artist
+   ...> limit 10;
+Parse error: near "FROM": syntax error
+  select *  from FROM Artist  limit 10;
+                 ^--- error here
+sqlite> select *
+   ...> from FROM Artist
+   ...>
+   ...> select*
+   ...> from Artist
+   ...> limit 10;
+Parse error: near "FROM": syntax error
+  select *  from FROM Artist   select* from Artist limit 10;
+                 ^--- error here
+sqlite> select *
+   ...> FROM Artist
+   ...> limit 10;
+1|AC/DC
+2|Accept
+3|Aerosmith
+4|Alanis Morissette
+5|Alice In Chains
+6|Antônio Carlos Jobim
+7|Apocalyptica
+8|Audioslave
+9|BackBeat
+10|Billy Cobham
+sqlite> select customerid, firstname, lastname, country
+   ...> from customer
+   ...> ;
+1|Luís|Gonçalves|Brazil
+2|Leonie|Köhler|Germany
+3|François|Tremblay|Canada
+4|Bjørn|Hansen|Norway
+5|František|Wichterlová|Czech Republic
+6|Helena|Holý|Czech Republic
+7|Astrid|Gruber|Austria
+8|Daan|Peeters|Belgium
+9|Kara|Nielsen|Denmark
+10|Eduardo|Martins|Brazil
+11|Alexandre|Rocha|Brazil
+12|Roberto|Almeida|Brazil
+13|Fernanda|Ramos|Brazil
+14|Mark|Philips|Canada
+15|Jennifer|Peterson|Canada
+16|Frank|Harris|USA
+17|Jack|Smith|USA
+18|Michelle|Brooks|USA
+19|Tim|Goyer|USA
+20|Dan|Miller|USA
+21|Kathy|Chase|USA
+22|Heather|Leacock|USA
+23|John|Gordon|USA
+24|Frank|Ralston|USA
+25|Victor|Stevens|USA
+26|Richard|Cunningham|USA
+27|Patrick|Gray|USA
+28|Julia|Barnett|USA
+29|Robert|Brown|Canada
+30|Edward|Francis|Canada
+31|Martha|Silk|Canada
+32|Aaron|Mitchell|Canada
+33|Ellie|Sullivan|Canada
+34|João|Fernandes|Portugal
+35|Madalena|Sampaio|Portugal
+36|Hannah|Schneider|Germany
+37|Fynn|Zimmermann|Germany
+38|Niklas|Schröder|Germany
+39|Camille|Bernard|France
+40|Dominique|Lefebvre|France
+41|Marc|Dubois|France
+42|Wyatt|Girard|France
+43|Isabelle|Mercier|France
+44|Terhi|Hämäläinen|Finland
+45|Ladislav|Kovács|Hungary
+46|Hugh|O'Reilly|Ireland
+47|Lucas|Mancini|Italy
+48|Johannes|Van der Berg|Netherlands
+49|Stanisław|Wójcik|Poland
+50|Enrique|Muñoz|Spain
+51|Joakim|Johansson|Sweden
+52|Emma|Jones|United Kingdom
+53|Phil|Hughes|United Kingdom
+54|Steve|Murray|United Kingdom
+55|Mark|Taylor|Australia
+56|Diego|Gutiérrez|Argentina
+57|Luis|Rojas|Chile
+58|Manoj|Pareek|India
+59|Puja|Srivastava|India
+sqlite> select *
+   ...> from customer
+   ...> where country = 'Brazil';
+1|Luís|Gonçalves|Embraer - Empresa Brasileira de Aeronáutica S.A.|Av. Brigadeiro Faria Lima, 2170|São José dos Campos|SP|Brazil|12227-000|+55 (12) 3923-5555|+55 (12) 3923-5566|luisg@embraer.com.br|3
+10|Eduardo|Martins|Woodstock Discos|Rua Dr. Falcão Filho, 155|São Paulo|SP|Brazil|01007-010|+55 (11) 3033-5446|+55 (11) 3033-4564|eduardo@woodstock.com.br|4
+11|Alexandre|Rocha|Banco do Brasil S.A.|Av. Paulista, 2022|São Paulo|SP|Brazil|01310-200|+55 (11) 3055-3278|+55 (11) 3055-8131|alero@uol.com.br|5
+12|Roberto|Almeida|Riotur|Praça Pio X, 119|Rio de Janeiro|RJ|Brazil|20040-020|+55 (21) 2271-7000|+55 (21) 2271-7070|roberto.almeida@riotur.gov.br|3
+13|Fernanda|Ramos||Qe 7 Bloco G|Brasília|DF|Brazil|71020-677|+55 (61) 3363-5547|+55 (61) 3363-7855|fernadaramos4@uol.com.br|4
+sqlite> select c.firstname, c.lastname, i.invoiceid, i.invoicedate, i.billingcountry
+   ...> from customer as c, invoice as i
+   ...> where c.country = 'Brazil' and
+   ...> c.customerid = i.customerid;
+Luís|Gonçalves|98|2010-03-11 00:00:00|Brazil
+Luís|Gonçalves|121|2010-06-13 00:00:00|Brazil
+Luís|Gonçalves|143|2010-09-15 00:00:00|Brazil
+Luís|Gonçalves|195|2011-05-06 00:00:00|Brazil
+Luís|Gonçalves|316|2012-10-27 00:00:00|Brazil
+Luís|Gonçalves|327|2012-12-07 00:00:00|Brazil
+Luís|Gonçalves|382|2013-08-07 00:00:00|Brazil
+Eduardo|Martins|25|2009-04-09 00:00:00|Brazil
+Eduardo|Martins|154|2010-11-14 00:00:00|Brazil
+Eduardo|Martins|177|2011-02-16 00:00:00|Brazil
+Eduardo|Martins|199|2011-05-21 00:00:00|Brazil
+Eduardo|Martins|251|2012-01-09 00:00:00|Brazil
+Eduardo|Martins|372|2013-07-02 00:00:00|Brazil
+Eduardo|Martins|383|2013-08-12 00:00:00|Brazil
+Alexandre|Rocha|57|2009-09-06 00:00:00|Brazil
+Alexandre|Rocha|68|2009-10-17 00:00:00|Brazil
+Alexandre|Rocha|123|2010-06-17 00:00:00|Brazil
+Alexandre|Rocha|252|2012-01-22 00:00:00|Brazil
+Alexandre|Rocha|275|2012-04-25 00:00:00|Brazil
+Alexandre|Rocha|297|2012-07-28 00:00:00|Brazil
+Alexandre|Rocha|349|2013-03-18 00:00:00|Brazil
+Roberto|Almeida|34|2009-05-23 00:00:00|Brazil
+Roberto|Almeida|155|2010-11-14 00:00:00|Brazil
+Roberto|Almeida|166|2010-12-25 00:00:00|Brazil
+Roberto|Almeida|221|2011-08-25 00:00:00|Brazil
+Roberto|Almeida|350|2013-03-31 00:00:00|Brazil
+Roberto|Almeida|373|2013-07-03 00:00:00|Brazil
+Roberto|Almeida|395|2013-10-05 00:00:00|Brazil
+Fernanda|Ramos|35|2009-06-05 00:00:00|Brazil
+Fernanda|Ramos|58|2009-09-07 00:00:00|Brazil
+Fernanda|Ramos|80|2009-12-10 00:00:00|Brazil
+Fernanda|Ramos|132|2010-07-31 00:00:00|Brazil
+Fernanda|Ramos|253|2012-01-22 00:00:00|Brazil
+Fernanda|Ramos|264|2012-03-03 00:00:00|Brazil
+Fernanda|Ramos|319|2012-11-01 00:00:00|Brazil
+sqlite> select * from employee
+   ...> where employee.title = 'Sales Support Agent';
+3|Peacock|Jane|Sales Support Agent|2|1973-08-29 00:00:00|2002-04-01 00:00:00|1111 6 Ave SW|Calgary|AB|Canada|T2P 5M5|+1 (403) 262-3443|+1 (403) 262-6712|jane@chinookcorp.com
+4|Park|Margaret|Sales Support Agent|2|1947-09-19 00:00:00|2003-05-03 00:00:00|683 10 Street SW|Calgary|AB|Canada|T2P 5G3|+1 (403) 263-4423|+1 (403) 263-4289|margaret@chinookcorp.com
+5|Johnson|Steve|Sales Support Agent|2|1965-03-03 00:00:00|2003-10-17 00:00:00|7727B 41 Ave|Calgary|AB|Canada|T3B 1Y7|1 (780) 836-9987|1 (780) 836-9543|steve@chinookcorp.com
+sqlite> select *
+   ...> from customer as c, invoice as i
+   ...> where c.country = 'Brazil' and
+   ...> c.customerid = i.customerid;
+1|Luís|Gonçalves|Embraer - Empresa Brasileira de Aeronáutica S.A.|Av. Brigadeiro Faria Lima, 2170|São José dos Campos|SP|Brazil|12227-000|+55 (12) 3923-5555|+55 (12) 3923-5566|luisg@embraer.com.br|3|98|1|2010-03-11 00:00:00|Av. Brigadeiro Faria Lima, 2170|São José dos Campos|SP|Brazil|12227-000|3.98
+1|Luís|Gonçalves|Embraer - Empresa Brasileira de Aeronáutica S.A.|Av. Brigadeiro Faria Lima, 2170|São José dos Campos|SP|Brazil|12227-000|+55 (12) 3923-5555|+55 (12) 3923-5566|luisg@embraer.com.br|3|121|1|2010-06-13 00:00:00|Av. Brigadeiro Faria Lima, 2170|São José dos Campos|SP|Brazil|12227-000|3.96
+1|Luís|Gonçalves|Embraer - Empresa Brasileira de Aeronáutica S.A.|Av. Brigadeiro Faria Lima, 2170|São José dos Campos|SP|Brazil|12227-000|+55 (12) 3923-5555|+55 (12) 3923-5566|luisg@embraer.com.br|3|143|1|2010-09-15 00:00:00|Av. Brigadeiro Faria Lima, 2170|São José dos Campos|SP|Brazil|12227-000|5.94
+1|Luís|Gonçalves|Embraer - Empresa Brasileira de Aeronáutica S.A.|Av. Brigadeiro Faria Lima, 2170|São José dos Campos|SP|Brazil|12227-000|+55 (12) 3923-5555|+55 (12) 3923-5566|luisg@embraer.com.br|3|195|1|2011-05-06 00:00:00|Av. Brigadeiro Faria Lima, 2170|São José dos Campos|SP|Brazil|12227-000|0.99
+1|Luís|Gonçalves|Embraer - Empresa Brasileira de Aeronáutica S.A.|Av. Brigadeiro Faria Lima, 2170|São José dos Campos|SP|Brazil|12227-000|+55 (12) 3923-5555|+55 (12) 3923-5566|luisg@embraer.com.br|3|316|1|2012-10-27 00:00:00|Av. Brigadeiro Faria Lima, 2170|São José dos Campos|SP|Brazil|12227-000|1.98
+1|Luís|Gonçalves|Embraer - Empresa Brasileira de Aeronáutica S.A.|Av. Brigadeiro Faria Lima, 2170|São José dos Campos|SP|Brazil|12227-000|+55 (12) 3923-5555|+55 (12) 3923-5566|luisg@embraer.com.br|3|327|1|2012-12-07 00:00:00|Av. Brigadeiro Faria Lima, 2170|São José dos Campos|SP|Brazil|12227-000|13.86
+1|Luís|Gonçalves|Embraer - Empresa Brasileira de Aeronáutica S.A.|Av. Brigadeiro Faria Lima, 2170|São José dos Campos|SP|Brazil|12227-000|+55 (12) 3923-5555|+55 (12) 3923-5566|luisg@embraer.com.br|3|382|1|2013-08-07 00:00:00|Av. Brigadeiro Faria Lima, 2170|São José dos Campos|SP|Brazil|12227-000|8.91
+10|Eduardo|Martins|Woodstock Discos|Rua Dr. Falcão Filho, 155|São Paulo|SP|Brazil|01007-010|+55 (11) 3033-5446|+55 (11) 3033-4564|eduardo@woodstock.com.br|4|25|10|2009-04-09 00:00:00|Rua Dr. Falcão Filho, 155|São Paulo|SP|Brazil|01007-010|8.91
+10|Eduardo|Martins|Woodstock Discos|Rua Dr. Falcão Filho, 155|São Paulo|SP|Brazil|01007-010|+55 (11) 3033-5446|+55 (11) 3033-4564|eduardo@woodstock.com.br|4|154|10|2010-11-14 00:00:00|Rua Dr. Falcão Filho, 155|São Paulo|SP|Brazil|01007-010|1.98
+10|Eduardo|Martins|Woodstock Discos|Rua Dr. Falcão Filho, 155|São Paulo|SP|Brazil|01007-010|+55 (11) 3033-5446|+55 (11) 3033-4564|eduardo@woodstock.com.br|4|177|10|2011-02-16 00:00:00|Rua Dr. Falcão Filho, 155|São Paulo|SP|Brazil|01007-010|3.96
+10|Eduardo|Martins|Woodstock Discos|Rua Dr. Falcão Filho, 155|São Paulo|SP|Brazil|01007-010|+55 (11) 3033-5446|+55 (11) 3033-4564|eduardo@woodstock.com.br|4|199|10|2011-05-21 00:00:00|Rua Dr. Falcão Filho, 155|São Paulo|SP|Brazil|01007-010|5.94
+10|Eduardo|Martins|Woodstock Discos|Rua Dr. Falcão Filho, 155|São Paulo|SP|Brazil|01007-010|+55 (11) 3033-5446|+55 (11) 3033-4564|eduardo@woodstock.com.br|4|251|10|2012-01-09 00:00:00|Rua Dr. Falcão Filho, 155|São Paulo|SP|Brazil|01007-010|0.99
+10|Eduardo|Martins|Woodstock Discos|Rua Dr. Falcão Filho, 155|São Paulo|SP|Brazil|01007-010|+55 (11) 3033-5446|+55 (11) 3033-4564|eduardo@woodstock.com.br|4|372|10|2013-07-02 00:00:00|Rua Dr. Falcão Filho, 155|São Paulo|SP|Brazil|01007-010|1.98
+10|Eduardo|Martins|Woodstock Discos|Rua Dr. Falcão Filho, 155|São Paulo|SP|Brazil|01007-010|+55 (11) 3033-5446|+55 (11) 3033-4564|eduardo@woodstock.com.br|4|383|10|2013-08-12 00:00:00|Rua Dr. Falcão Filho, 155|São Paulo|SP|Brazil|01007-010|13.86
+11|Alexandre|Rocha|Banco do Brasil S.A.|Av. Paulista, 2022|São Paulo|SP|Brazil|01310-200|+55 (11) 3055-3278|+55 (11) 3055-8131|alero@uol.com.br|5|57|11|2009-09-06 00:00:00|Av. Paulista, 2022|São Paulo|SP|Brazil|01310-200|1.98
+11|Alexandre|Rocha|Banco do Brasil S.A.|Av. Paulista, 2022|São Paulo|SP|Brazil|01310-200|+55 (11) 3055-3278|+55 (11) 3055-8131|alero@uol.com.br|5|68|11|2009-10-17 00:00:00|Av. Paulista, 2022|São Paulo|SP|Brazil|01310-200|13.86
+11|Alexandre|Rocha|Banco do Brasil S.A.|Av. Paulista, 2022|São Paulo|SP|Brazil|01310-200|+55 (11) 3055-3278|+55 (11) 3055-8131|alero@uol.com.br|5|123|11|2010-06-17 00:00:00|Av. Paulista, 2022|São Paulo|SP|Brazil|01310-200|8.91
+11|Alexandre|Rocha|Banco do Brasil S.A.|Av. Paulista, 2022|São Paulo|SP|Brazil|01310-200|+55 (11) 3055-3278|+55 (11) 3055-8131|alero@uol.com.br|5|252|11|2012-01-22 00:00:00|Av. Paulista, 2022|São Paulo|SP|Brazil|01310-200|1.98
+11|Alexandre|Rocha|Banco do Brasil S.A.|Av. Paulista, 2022|São Paulo|SP|Brazil|01310-200|+55 (11) 3055-3278|+55 (11) 3055-8131|alero@uol.com.br|5|275|11|2012-04-25 00:00:00|Av. Paulista, 2022|São Paulo|SP|Brazil|01310-200|3.96
+11|Alexandre|Rocha|Banco do Brasil S.A.|Av. Paulista, 2022|São Paulo|SP|Brazil|01310-200|+55 (11) 3055-3278|+55 (11) 3055-8131|alero@uol.com.br|5|297|11|2012-07-28 00:00:00|Av. Paulista, 2022|São Paulo|SP|Brazil|01310-200|5.94
+11|Alexandre|Rocha|Banco do Brasil S.A.|Av. Paulista, 2022|São Paulo|SP|Brazil|01310-200|+55 (11) 3055-3278|+55 (11) 3055-8131|alero@uol.com.br|5|349|11|2013-03-18 00:00:00|Av. Paulista, 2022|São Paulo|SP|Brazil|01310-200|0.99
+12|Roberto|Almeida|Riotur|Praça Pio X, 119|Rio de Janeiro|RJ|Brazil|20040-020|+55 (21) 2271-7000|+55 (21) 2271-7070|roberto.almeida@riotur.gov.br|3|34|12|2009-05-23 00:00:00|Praça Pio X, 119|Rio de Janeiro|RJ|Brazil|20040-020|0.99
+12|Roberto|Almeida|Riotur|Praça Pio X, 119|Rio de Janeiro|RJ|Brazil|20040-020|+55 (21) 2271-7000|+55 (21) 2271-7070|roberto.almeida@riotur.gov.br|3|155|12|2010-11-14 00:00:00|Praça Pio X, 119|Rio de Janeiro|RJ|Brazil|20040-020|1.98
+12|Roberto|Almeida|Riotur|Praça Pio X, 119|Rio de Janeiro|RJ|Brazil|20040-020|+55 (21) 2271-7000|+55 (21) 2271-7070|roberto.almeida@riotur.gov.br|3|166|12|2010-12-25 00:00:00|Praça Pio X, 119|Rio de Janeiro|RJ|Brazil|20040-020|13.86
+12|Roberto|Almeida|Riotur|Praça Pio X, 119|Rio de Janeiro|RJ|Brazil|20040-020|+55 (21) 2271-7000|+55 (21) 2271-7070|roberto.almeida@riotur.gov.br|3|221|12|2011-08-25 00:00:00|Praça Pio X, 119|Rio de Janeiro|RJ|Brazil|20040-020|8.91
+12|Roberto|Almeida|Riotur|Praça Pio X, 119|Rio de Janeiro|RJ|Brazil|20040-020|+55 (21) 2271-7000|+55 (21) 2271-7070|roberto.almeida@riotur.gov.br|3|350|12|2013-03-31 00:00:00|Praça Pio X, 119|Rio de Janeiro|RJ|Brazil|20040-020|1.98
+12|Roberto|Almeida|Riotur|Praça Pio X, 119|Rio de Janeiro|RJ|Brazil|20040-020|+55 (21) 2271-7000|+55 (21) 2271-7070|roberto.almeida@riotur.gov.br|3|373|12|2013-07-03 00:00:00|Praça Pio X, 119|Rio de Janeiro|RJ|Brazil|20040-020|3.96
+12|Roberto|Almeida|Riotur|Praça Pio X, 119|Rio de Janeiro|RJ|Brazil|20040-020|+55 (21) 2271-7000|+55 (21) 2271-7070|roberto.almeida@riotur.gov.br|3|395|12|2013-10-05 00:00:00|Praça Pio X, 119|Rio de Janeiro|RJ|Brazil|20040-020|5.94
+13|Fernanda|Ramos||Qe 7 Bloco G|Brasília|DF|Brazil|71020-677|+55 (61) 3363-5547|+55 (61) 3363-7855|fernadaramos4@uol.com.br|4|35|13|2009-06-05 00:00:00|Qe 7 Bloco G|Brasília|DF|Brazil|71020-677|1.98
+13|Fernanda|Ramos||Qe 7 Bloco G|Brasília|DF|Brazil|71020-677|+55 (61) 3363-5547|+55 (61) 3363-7855|fernadaramos4@uol.com.br|4|58|13|2009-09-07 00:00:00|Qe 7 Bloco G|Brasília|DF|Brazil|71020-677|3.96
+13|Fernanda|Ramos||Qe 7 Bloco G|Brasília|DF|Brazil|71020-677|+55 (61) 3363-5547|+55 (61) 3363-7855|fernadaramos4@uol.com.br|4|80|13|2009-12-10 00:00:00|Qe 7 Bloco G|Brasília|DF|Brazil|71020-677|5.94
+13|Fernanda|Ramos||Qe 7 Bloco G|Brasília|DF|Brazil|71020-677|+55 (61) 3363-5547|+55 (61) 3363-7855|fernadaramos4@uol.com.br|4|132|13|2010-07-31 00:00:00|Qe 7 Bloco G|Brasília|DF|Brazil|71020-677|0.99
+13|Fernanda|Ramos||Qe 7 Bloco G|Brasília|DF|Brazil|71020-677|+55 (61) 3363-5547|+55 (61) 3363-7855|fernadaramos4@uol.com.br|4|253|13|2012-01-22 00:00:00|Qe 7 Bloco G|Brasília|DF|Brazil|71020-677|1.98
+13|Fernanda|Ramos||Qe 7 Bloco G|Brasília|DF|Brazil|71020-677|+55 (61) 3363-5547|+55 (61) 3363-7855|fernadaramos4@uol.com.br|4|264|13|2012-03-03 00:00:00|Qe 7 Bloco G|Brasília|DF|Brazil|71020-677|13.86
+13|Fernanda|Ramos||Qe 7 Bloco G|Brasília|DF|Brazil|71020-677|+55 (61) 3363-5547|+55 (61) 3363-7855|fernadaramos4@uol.com.br|4|319|13|2012-11-01 00:00:00|Qe 7 Bloco G|Brasília|DF|Brazil|71020-677|8.91
+sqlite> select e.*, count(c.customerid) as 'TotalCustomers'
+   ...> from employee as e
+   ...>     join customer as c on e.employeeid = c.supportrepid
+   ...> group by e.employeeid;
+3|Peacock|Jane|Sales Support Agent|2|1973-08-29 00:00:00|2002-04-01 00:00:00|1111 6 Ave SW|Calgary|AB|Canada|T2P 5M5|+1 (403) 262-3443|+1 (403) 262-6712|jane@chinookcorp.com|21
+4|Park|Margaret|Sales Support Agent|2|1947-09-19 00:00:00|2003-05-03 00:00:00|683 10 Street SW|Calgary|AB|Canada|T2P 5G3|+1 (403) 263-4423|+1 (403) 263-4289|margaret@chinookcorp.com|20
+5|Johnson|Steve|Sales Support Agent|2|1965-03-03 00:00:00|2003-10-17 00:00:00|7727B 41 Ave|Calgary|AB|Canada|T3B 1Y7|1 (780) 836-9987|1 (780) 836-9543|steve@chinookcorp.com|18
+sqlite> select i.billingcountry, sum(total) as 'TotalSales'
+   ...> from invoice as i
+   ...> group by billingcountry
+   ...> order by totalsales desc;
+USA|523.06
+Canada|303.96
+France|195.1
+Brazil|190.1
+Germany|156.48
+United Kingdom|112.86
+Czech Republic|90.24
+Portugal|77.24
+India|75.26
+Chile|46.62
+Ireland|45.62
+Hungary|45.62
+Austria|42.62
+Finland|41.62
+Netherlands|40.62
+Norway|39.62
+Sweden|38.62
+Poland|37.62
+Italy|37.62
+Denmark|37.62
+Australia|37.62
+Argentina|37.62
+Spain|37.62
+Belgium|37.62
+sqlite>
