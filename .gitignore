@@ -59,4 +59,13 @@ practica/week1/notebooks/variables/tuples_with_solutions.ipynb
 practica/pics/.ipynb_checkpoints/mercury-checkpoint.jpg
 practica/csv/.ipynb_checkpoints/planets-checkpoint.csv
 practica/week2/notebooks/.ipynb_checkpoints/dictionaries_with_solutions1-checkpoint.ipynb
+<<<<<<< HEAD
 >>>>>>> a08a271fb2c87009dcac5ce46e3abd23e353dbeb
+=======
+practica/csv/.ipynb_checkpoints/marslander-checkpoint.csv
+practica/.ipynb_checkpoints/matrix_example-checkpoint.ipynb
+practica/.ipynb_checkpoints/scikit-learn-checkpoint.ipynb
+practica/week3/.ipynb_checkpoints/K means clustering - hierarchical-checkpoint.ipynb
+practica/week3/.ipynb_checkpoints/k-means-checkpoint.ipynb
+practica/week3/.ipynb_checkpoints/shopping-data-checkpoint.csv
+>>>>>>> 2f2ce351f589834c0a9dc2fb450bf4f50fbb5ab1
